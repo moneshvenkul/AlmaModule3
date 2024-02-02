@@ -1,0 +1,66 @@
+---- HTML Basics
+What is HTML?
+Describe the basic structure of an HTML document.
+What is the difference between <div> and <span>?
+How do you insert an image in an HTML page?
+What are HTML attributes? Give examples.
+Explain the purpose of the <head> section in an HTML document.
+How do you create a hyperlink in HTML?
+What is the difference between <!DOCTYPE html> and <html>?
+What are semantic HTML tags? Give examples.
+How can you create a list in HTML? Describe ordered, unordered, and definition lists.
+----- HTML Advanced
+What is HTML5, and how is it different from HTML4?
+Explain the concept of Web Storage in HTML5.
+What are Data- attributes good for?*
+How do you use HTML5 Shiv?
+What are Web Workers, and when would you use them?
+Explain the purpose of the <canvas> element in HTML5.
+How do you handle multimedia files (audio and video) in HTML5?
+What is the difference between SVG and <canvas>?
+How do you implement drag and drop functionality in HTML5?
+What are some new form elements introduced in HTML5?
+---- CSS Basics
+What is CSS, and why is it used?
+What is the difference between class selectors and ID selectors?
+How do you include CSS in an HTML document?
+Explain the box model in CSS.
+What are pseudo-classes in CSS? Give examples.
+How do you center a div both vertically and horizontally?
+What does inherit mean in CSS?
+How do you create a zebra-striped table with CSS?
+What is the difference between visibility:hidden and display:none?
+How do you add a border to an element in CSS?
+----- CSS Advanced
+Explain CSS selectors and how specificity is calculated.
+What are CSS preprocessors, and why are they used?
+Explain Flexbox and its main features.
+Discuss CSS Grid and its advantages over Flexbox.
+What are CSS animations, and how do you implement them?
+How do you create a responsive design using CSS?
+What is the purpose of media queries?
+Explain the concept of CSS variables.
+What are the differences between rem, em, and px units?
+How do you handle browser compatibility issues in CSS?
+------ Bootstrap Basics
+What is Bootstrap, and why do we use it?
+How do you integrate Bootstrap into a web project?
+Explain the Bootstrap grid system.
+How do you make images responsive in Bootstrap?
+What are Bootstrap components? Give examples.
+What is the purpose of the container class in Bootstrap?
+How do you use Bootstrap’s modal component?
+What are utility classes in Bootstrap? Give examples.
+How do you customize Bootstrap’s default styling?
+What is the difference between Bootstrap 3 and 4?
+------ Bootstrap Advanced
+Explain the flexbox grid system in Bootstrap 4.
+How do you use Bootstrap 4 cards to replace old Bootstrap panels, wells, and thumbnails?
+What are Bootstrap 4's custom forms, and how do you use them?
+Discuss the significance of Bootstrap 4's utility classes and how they improve development speed.
+How does Bootstrap handle mobile responsiveness?
+What are mixins in Bootstrap, and how are they used?
+How do you extend Bootstrap components with JavaScript?
+What are some new features in Bootstrap 5?
+How do you use Bootstrap’s Sass variables for customizing your theme?
+Discuss the Bootstrap grid system and breakpoints in the context of responsive design.
