@@ -1,66 +1,193 @@
----- HTML Basics
-What is HTML?
-Describe the basic structure of an HTML document.
-What is the difference between <div> and <span>?
-How do you insert an image in an HTML page?
-What are HTML attributes? Give examples.
-Explain the purpose of the <head> section in an HTML document.
-How do you create a hyperlink in HTML?
-What is the difference between <!DOCTYPE html> and <html>?
-What are semantic HTML tags? Give examples.
-How can you create a list in HTML? Describe ordered, unordered, and definition lists.
------ HTML Advanced
-What is HTML5, and how is it different from HTML4?
-Explain the concept of Web Storage in HTML5.
-What are Data- attributes good for?*
-How do you use HTML5 Shiv?
-What are Web Workers, and when would you use them?
-Explain the purpose of the <canvas> element in HTML5.
-How do you handle multimedia files (audio and video) in HTML5?
-What is the difference between SVG and <canvas>?
-How do you implement drag and drop functionality in HTML5?
-What are some new form elements introduced in HTML5?
----- CSS Basics
-What is CSS, and why is it used?
-What is the difference between class selectors and ID selectors?
-How do you include CSS in an HTML document?
-Explain the box model in CSS.
-What are pseudo-classes in CSS? Give examples.
-How do you center a div both vertically and horizontally?
-What does inherit mean in CSS?
-How do you create a zebra-striped table with CSS?
-What is the difference between visibility:hidden and display:none?
-How do you add a border to an element in CSS?
------ CSS Advanced
-Explain CSS selectors and how specificity is calculated.
-What are CSS preprocessors, and why are they used?
-Explain Flexbox and its main features.
-Discuss CSS Grid and its advantages over Flexbox.
-What are CSS animations, and how do you implement them?
-How do you create a responsive design using CSS?
-What is the purpose of media queries?
-Explain the concept of CSS variables.
-What are the differences between rem, em, and px units?
-How do you handle browser compatibility issues in CSS?
------- Bootstrap Basics
-What is Bootstrap, and why do we use it?
-How do you integrate Bootstrap into a web project?
-Explain the Bootstrap grid system.
-How do you make images responsive in Bootstrap?
-What are Bootstrap components? Give examples.
-What is the purpose of the container class in Bootstrap?
-How do you use Bootstrap’s modal component?
-What are utility classes in Bootstrap? Give examples.
-How do you customize Bootstrap’s default styling?
-What is the difference between Bootstrap 3 and 4?
------- Bootstrap Advanced
-Explain the flexbox grid system in Bootstrap 4.
-How do you use Bootstrap 4 cards to replace old Bootstrap panels, wells, and thumbnails?
-What are Bootstrap 4's custom forms, and how do you use them?
-Discuss the significance of Bootstrap 4's utility classes and how they improve development speed.
-How does Bootstrap handle mobile responsiveness?
-What are mixins in Bootstrap, and how are they used?
-How do you extend Bootstrap components with JavaScript?
-What are some new features in Bootstrap 5?
+!
+HTML Basics
+1. What is HTML?
+HTML (HyperText Markup Language) is the standard markup language used to create and design web pages. It describes the structure of web pages using markup.
+
+2. Describe the basic structure of an HTML document.
+An HTML document starts with a <!DOCTYPE html> declaration, followed by an <html> element that encloses the <head> and <body> sections. The <head> contains meta-information and links to scripts and stylesheets, while the <body> contains the content of the page.
+
+3. What is the difference between <div> and <span>?
+A <div> is a block-level element used to structure or divide sections of a page, often used with CSS for layout. A <span> is an inline element used to style or highlight parts of text without causing a line break.
+
+4. How do you insert an image in an HTML page?
+Use the <img> tag and specify the source of the image with the src attribute, like <img src="image.jpg" alt="Description">. The alt attribute provides alternative text if the image cannot be displayed.
+
+5. What are HTML attributes? Give examples.
+Attributes provide additional information about elements. Examples include src in <img> for image source, href in <a> for hyperlink reference, and class and id for styling hooks.
+
+6. Explain the purpose of the <head> section in an HTML document.
+The <head> section contains meta-information about the document, links to stylesheets, scripts, and other resources that are not directly displayed on the page.
+
+7. How do you create a hyperlink in HTML?
+Use the <a> tag with the href attribute, like <a href="https://example.com">Visit Example</a>.
+
+8. What is the difference between <!DOCTYPE html> and <html>?
+<!DOCTYPE html> declares the document type and version of HTML being used, ensuring the browser renders it correctly. <html> is the root element that wraps all the content of an HTML document.
+
+9. What are semantic HTML tags? Give examples.
+Semantic HTML tags clearly describe their meaning in a human- and machine-readable way. Examples include <article>, <footer>, <header>, and <nav>.
+
+10. How can you create a list in HTML? Describe ordered, unordered, and definition lists.
+Use <ol> for ordered lists, <ul> for unordered lists, and <dl> for definition lists. <ol> and <ul> contain <li> items, while <dl> uses <dt> for terms and <dd> for definitions.
+
+HTML Advanced
+1. What is HTML5, and how is it different from HTML4?
+HTML5 is the latest version of HTML, offering new elements, attributes, and behaviors. It includes features for multimedia, graphical content, and better support for modern web applications compared to HTML4.
+
+2. Explain the concept of Web Storage in HTML5.
+Web Storage provides two storage areas—local storage and session storage—for storing key-value pairs on the client side, allowing web applications to store data persistently or per session.
+
+3. What are Data- attributes good for?
+Data- attributes allow you to store extra information on HTML elements without interfering with the styling or behavior, useful for providing additional data to JavaScript without using hidden elements.
+
+4. How do you use HTML5 Shiv?
+HTML5 Shiv is a JavaScript workaround used to enable styling of HTML5 elements in older Internet Explorer versions that don't support these elements natively. It's included in the <head> via a script tag.
+
+5. What are Web Workers, and when would you use them?
+Web Workers allow JavaScript to perform tasks in background threads, preventing such tasks from blocking the main thread and improving web application performance. Use them for tasks like data loading and processing that don't require DOM interaction.
+
+6. Explain the purpose of the <canvas> element in HTML5.
+The <canvas> element is used to draw graphics on a web page via scripting (usually JavaScript). It's ideal for rendering graphs, game graphics, or other visual images dynamically.
+
+7. How do you handle multimedia files (audio and video) in HTML5?
+Use the <audio> and <video> elements, specifying sources with the src attribute or within <source> tags for multiple formats. Attributes like controls, autoplay, and loop manage playback behavior.
+
+8. What is the difference between SVG and <canvas>?
+SVG (Scalable Vector Graphics) is XML-based for defining vector-based graphics for the Web; it scales well and is manipulable via CSS and JavaScript. <canvas> provides a pixel-based area for drawing graphics via scripting, suitable for intensive graphical operations and games.
+
+9. How do you implement drag and drop functionality in HTML5?
+Use the draggable attribute on elements and handle drag events (dragstart, dragover, drop, etc.) with JavaScript to implement custom drag-and-drop interfaces.
+
+10. What are some new form elements introduced in HTML5?
+HTML5 introduces form elements like <date>, <time>, <email>, <range>, and <number> to facilitate inputting specific types of data with validation and controls appropriate to the data type.
+
+CSS Basics
+1. What is CSS, and why is it used?
+CSS (Cascading Style Sheets) is used to style and layout web pages—for example, to change the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.
+
+2. What is the difference between class selectors and ID selectors?
+Class selectors (.classname) are used to style any number of elements, and the same class can be used on multiple elements. ID selectors (#idname) are unique and should be used for a single element in the document.
+
+3. How do you include CSS in an HTML document?
+CSS can be included in three ways: inline (directly in an element's style attribute), internal (within <style> tags in the <head>), and external (linking to an external CSS file with <link>).
+
+4. Explain the box model in CSS.
+The CSS box model describes the design and layout of elements. It consists of margins, borders, padding, and the actual content. This model allows us to add space around and between HTML elements.
+
+5. What are pseudo-classes in CSS? Give examples.
+Pseudo-classes are used to define a special state of an element. Examples include :hover, :focus, :active, and :visited, which style links differently depending on user interaction.
+
+6. How do you center a div both vertically and horizontally?
+To center a div, you can use the flexbox model by setting the container's display to flex, then using justify-content and align-items properties set to center.
+
+7. What does inherit mean in CSS?
+The inherit value is used to specify that a property should inherit its value from its parent element. This can be used for any CSS property.
+
+8. How do you create a zebra-striped table with CSS?
+Use the :nth-child pseudo-class with even and odd arguments to style even and odd rows differently, like tr:nth-child(even) and tr:nth-child(odd).
+
+9. What is the difference between visibility: hidden and display: none?
+visibility: hidden hides an element but it still takes up space in the layout. display: none removes the element from the document flow, and it does not take up space.
+
+10. How do you add a border to an element in CSS?
+Use the border property, specifying the width, style, and color, like border: 1px solid black;.
+
+CSS Advanced
+1. Explain CSS selectors and how specificity is calculated.
+CSS selectors target HTML elements for styling. Specificity is a measure of how precisely selectors match elements, calculated based on the types of selectors used (id > class > element). The more specific selector overrides the less specific ones.
+
+2. What are CSS preprocessors, and why are they used?
+CSS preprocessors (like Sass, Less, and Stylus) extend CSS with variables, nesting, and functions to write CSS more efficiently and with better organization. They compile down to standard CSS.
+
+3. Explain Flexbox and its main features.
+Flexbox is a CSS layout model designed for more efficient space distribution and alignment in complex layouts and web applications. It allows flexible and responsive layout arrangements with properties for direction, wrapping, alignment, and order.
+
+4. Discuss CSS Grid and its advantages over Flexbox.
+CSS Grid is a two-dimensional layout system providing control over rows and columns, ideal for creating complex web layouts. Unlike Flexbox, which is one-dimensional, Grid offers more precise layout control, aligning content both horizontally and vertically.
+
+5. What are CSS animations, and how do you implement them?
+CSS animations enable the transition between CSS property values smoothly over a specified duration. Define keyframes for the animation and apply it to elements using the animation property.
+
+6. How do you create a responsive design using CSS?
+Responsive design uses media queries to apply different styles based on device characteristics, like screen size, orientation, and resolution. Layout techniques like Flexbox and Grid also help create responsive designs.
+
+7. What is the purpose of media queries?
+Media queries allow CSS to apply different styles based on conditions like screen width, height, orientation, and resolution, enabling responsive web design.
+
+8. Explain the concept of CSS variables.
+CSS variables, also known as custom properties, allow you to store specific values to be reused throughout a document. They are defined with a double dash (--var-name) and accessed using the var() function.
+
+9. What are the differences between rem, em, and px units?
+px is an absolute unit representing pixels on the screen. em is relative to the font size of the element, scaling with it. rem is relative to the root element's font size, providing consistency across elements.
+
+10. How do you handle browser compatibility issues in CSS?
+Use vendor prefixes for CSS properties that require them, provide fallbacks for older browsers, employ feature detection libraries like Modernizr, and use CSS normalization to ensure consistency.
+
+Bootstrap Basics
+1. What is Bootstrap, and why do we use it?
+Bootstrap is a front-end framework for developing responsive and mobile-first websites. It includes CSS and JavaScript templates for typography, forms, buttons, navigation, and other interface components, simplifying web development.
+
+2. How do you integrate Bootstrap into a web project?
+Include Bootstrap by linking to its CSS and JS files in your HTML document. You can download these files or link to them directly from a content delivery network (CDN).
+
+3. Explain the Bootstrap grid system.
+The grid system uses rows and columns to create layouts. It's based on a 12-column structure that can be combined and nested to create complex layouts with responsiveness built-in.
+
+4. How do you make images responsive in Bootstrap?
+Add the img-fluid class to your <img> tags. This makes images scale with their container while maintaining their aspect ratio.
+
+5. What are Bootstrap components? Give examples.
+Bootstrap components are reusable UI elements that enhance the user interface. Examples include modals, dropdowns, alerts, and carousels.
+
+6. What is the purpose of the container class in Bootstrap?
+The container class is used to wrap site contents and align them properly within the page. It can be fixed-width (container) or full-width (container-fluid).
+
+7. How do you use Bootstrap’s modal component?
+Implement a modal by using the provided HTML structure and classes. Trigger it with JavaScript or via data attributes to display a dialog box for additional content or confirmation messages.
+
+8. What are utility classes in Bootstrap? Give examples.
+Utility classes in Bootstrap provide quick styling solutions for common CSS tasks. Examples include .text-center for centering text, .mt-4 for margin-top, and .d-none for display none.
+
+9. How do you customize Bootstrap’s default styling?
+Customize Bootstrap by overriding its CSS with your own styles, using its Sass variables for more granular control, or modifying the source Sass/LESS files before compiling them.
+
+10. What is the difference between Bootstrap 3 and 4?
+Bootstrap 4 uses Flexbox by default, offers more utility classes, and has updated components and a new approach to global sizing and responsiveness. It also dropped support for older browsers.
+
+Bootstrap Advanced
+1. Explain the flexbox grid system in Bootstrap 4.
+The Flexbox grid system in Bootstrap 4 provides a more flexible way to lay out, align and distribute space among items in a container, even when their sizes are unknown or dynamic.
+
+2. How do you use Bootstrap 4 cards to replace old Bootstrap panels, wells, and thumbnails?
+Cards in Bootstrap 4 are flexible containers for displaying content with options for headers, footers, images, and more, serving as a replacement with more features and flexibility than panels, wells, and thumbnails.
+
+3. What are Bootstrap 4's custom forms, and how do you use them?
+Custom forms offer styled form elements that are consistent across browsers. Use specific classes provided by Bootstrap to style checkboxes, radio buttons, selects, and file inputs.
+
+4. Discuss the significance of Bootstrap 4's utility classes and how they improve development speed.
+Utility classes for margin, padding, display, and more offer a quick way to apply styles without writing custom CSS, speeding up development and ensuring consistency.
+
+5. How does Bootstrap handle mobile responsiveness?
+Bootstrap uses a mobile-first approach with a responsive grid system, fluid images, and media queries to ensure that websites look and work well on all devices.
+
+
+6. What are mixins in Bootstrap, and how are they used?
+Mixins in Bootstrap are a powerful feature provided by the Sass preprocessor. Think of mixins as a set of reusable styles or functions that you can include in other Sass files. They allow you to write CSS code that is more dry (Don't Repeat Yourself), which means you avoid repeating the same code snippets over and over again. For example, if you have a commonly used button style with specific padding, color, and border-radius, you can create a mixin for it and include that mixin wherever you need a button with those styles. This makes your code cleaner and easier to maintain.
+
+7. How do you extend Bootstrap components with JavaScript?
+Bootstrap components, like modals, dropdowns, and carousels, can be extended or customized using JavaScript. This means you can add additional functionality or modify the behavior of these components beyond what is provided out of the box. For example, you might use JavaScript to dynamically change the content of a modal based on user interaction, or to implement custom validation logic in a form. Bootstrap provides a set of JavaScript APIs for each component, which you can use to interact with the components programmatically.
+
+8. What are some new features in Bootstrap 5?
+Bootstrap 5 comes with several new features and improvements over its predecessor:
+
+Dropped jQuery Dependency: Bootstrap 5 no longer requires jQuery and instead uses vanilla JavaScript, making the library lighter and faster.
+Improved Grid System: The grid system has been enhanced with more flexible classes and utilities for better layout options.
+Custom SVG Icons: Bootstrap 5 introduces a new SVG icon library that's easy to customize and use within your projects.
+Enhanced Forms: The forms have been updated with new styles and better customization options.
+Dark Mode Support: There's better support for dark mode, allowing easier implementation of dark-themed websites.
+Updated Components: Many components have been refined and improved for better performance and aesthetics.
 How do you use Bootstrap’s Sass variables for customizing your theme?
-Discuss the Bootstrap grid system and breakpoints in the context of responsive design.
+Bootstrap's Sass variables allow you to customize the look and feel of your site globally. These variables control various aspects of the framework, such as colors, font sizes, margins, and more. By overriding these variables, you can apply a consistent theme to your site without having to override individual CSS properties. This is done by importing your custom variable definitions before importing Bootstrap's Sass files in your project. This way, when Bootstrap compiles its CSS, it uses your custom values instead of the default ones.
+
+9. Discuss the Bootstrap grid system and breakpoints in the context of responsive design.
+The Bootstrap grid system is a flexible structure that uses rows and columns to layout and align content. It's built with flexbox and allows you to create responsive layouts that adapt to the screen size of the device being used. Breakpoints are the key to this system; they allow the grid to adjust at specific widths. Bootstrap defines several breakpoints (e.g., sm, md, lg, xl, xxl), each corresponding to a range of screen sizes. By using these breakpoints in your class names (e.g., .col-md-6), you can specify how many columns an element should span on different devices, making your design responsive and adaptive to various screen sizes.
