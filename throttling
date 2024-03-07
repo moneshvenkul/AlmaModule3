@@ -1,0 +1,19 @@
+function throttle(fn, delay) {
+    let run = false
+    return function (...args) {
+      if (!run) {
+        fn(...args)
+        run = true
+        setTimeout( () => run = false, delay)
+      }
+    }
+  }
+
+const handleMouseMove = e => {
+      //everytime the mouse moved this function will be invoked
+      console.log('api call to do some operations...')
+  }
+
+  //event listener to track the movement of the mouse
+  window.addEventListener('mousemove', throttle(handleMouseMove, 1000))
+//1000ms => 1 second
