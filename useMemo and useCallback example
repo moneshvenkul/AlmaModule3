@@ -25,3 +25,36 @@ function factorialOf(n) {
 }
 
 export default FactorialCalculator;
+
+
+//useCallback
+
+import React, { useState, useCallback } from 'react';
+
+function Child({ onButtonClick }) {
+  console.log('Child rendered');
+  return (
+    <button onClick={onButtonClick}>Child button Click me</button>
+  );
+}
+
+function Parent() {
+  const [count, setCount] = useState(0);
+
+  const incrementCount = useCallback(() => {
+    setCount(c => c + 1);
+  }, []); // Dependency array
+
+  return (
+    <div>
+       Parent calling Child Component
+      <Child onButtonClick={incrementCount} />
+      <p>Count: {count}</p>
+    </div>
+  );
+}
+// export parent and child
+export default Parent;
+export { Child };
+
+
