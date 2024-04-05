@@ -1,0 +1,56 @@
+Overview of ReactJS & JSX
+1. What is ReactJS and why is it used?
+
+ReactJS is a JavaScript library for building user interfaces, particularly single-page applications (SPAs). It's used for handling the view layer and allows developers to create reusable UI components. React's virtual DOM, component-based architecture, and efficient update mechanisms make it highly performant and popular among developers.
+2. Explain what JSX is and its importance in React.
+
+JSX (JavaScript XML) is a syntax extension for JavaScript used in React to describe what the UI should look like. By using JSX, developers can write HTML structures in the same file as JavaScript code, making the code easier to understand and develop. It also allows React to show more useful error and warning messages.
+Components, State and Props
+1. How do components, state, and props work together in React?
+
+Components are the building blocks of a React application's UI. A component's state is an object that determines the behavior of that component. Props (short for properties) are read-only objects that are used to pass data from a parent component to a child component. Together, they enable dynamic and interactive user interfaces.
+2. Can you explain the difference between stateful and stateless components?
+
+Stateful components (also known as class components) can hold and manage state. They provide more features but are also more complex. Stateless components (functional components), on the other hand, do not hold or manage state directly and can return output that depends solely on the received props, making them simpler and more reusable.
+Routing and Handling Events in React
+1. How do you implement routing in a React application?
+
+Routing in a React application is typically implemented using React Router. It enables navigation between different components in a single-page application, simulating multi-page application behavior without the page reloading. You define routes based on your application's URL structure and link them to specific components.
+2. Explain how event handling works in React.
+
+In React, events are managed using camelCase syntax and passed as functions rather than strings. The event handling function is passed as a prop to the component's element needing to listen to the event. React's event system is a cross-browser wrapper around the browser's native event, allowing for a consistent syntax and behavior across all browsers.
+Life Cycle Methods & React Hooks
+1. What are life cycle methods in React? Can you name a few?
+
+Life cycle methods are special methods in class components that allow you to run code at particular times in the component's life cycle, such as mounting, updating, and unmounting. Examples include componentDidMount, shouldComponentUpdate, and componentWillUnmount.
+2. What are React Hooks and give examples of common hooks?
+
+React Hooks are functions that let you use state and other React features in functional components. They were introduced to simplify state management and side effects in these components. Common hooks include useState, useEffect, and useContext.
+Managing State with Redux
+1. What is Redux and how is it used in React applications?
+
+Redux is a predictable state container for JavaScript apps, often used with React. It helps manage the application's state globally, making it easier to keep track of state changes and data flow across components, especially in large applications.
+2. Explain the basic principles of Redux.
+
+The basic principles of Redux include a single source of truth (the state of your whole application is stored in an object tree within a single store), state is read-only (the only way to change the state is to emit an action, an object describing what happened), and changes are made with pure functions (to specify how the state tree is transformed by actions, you write pure reducers).
+State Management and Optimization
+1. How can you optimize state management in a React application?
+
+Optimizing state management can involve using techniques such as memoization, selective rendering, and lazy loading of components. Additionally, managing local component state effectively and leveraging contexts or state management libraries like Redux for global state can lead to more efficient re-renders and updates.
+2. What role does immutability play in React applications, especially in state management?
+
+Immutability is a core concept in React, particularly important in state management. By treating state as immutable, React can efficiently determine when re-renders are necessary. This leads to performance optimizations and avoids unexpected side effects, making state management predictable and reliable.
+Error Handling, Debugging, and Unit Testing in ReactJS
+1. How do you handle errors in a React application?
+
+Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. They are a graceful way to handle errors in React applications.
+2. Can you explain the importance of unit testing in React and suggest some tools?
+
+Unit testing ensures that individual components of a React application work as intended in isolation, leading to more reliable code, easier refactoring, and reduced bugs. Tools like Jest for testing and Enzyme or React Testing Library for component testing are commonly used.
+Project Management & Deployment - Netlify
+1. How does Netlify facilitate project management and deployment for React applications?
+
+Netlify provides continuous deployment services from Git across all modern front-end projects, including React applications. It automatically builds and deploys your site whenever you push to your Git repository, simplifying project management and deployment processes with features like previews, rollbacks, and integrated CI/CD.
+2. What are some benefits of using Netlify for deploying React applications?
+
+Benefits include pre-rendering for faster page loads, secure serverless functions for backend operations, easy rollbacks to previous versions, and automatic HTTPS, enhancing both performance and security. Netlify's intuitive UI and comprehensive documentation also streamline the deployment process.
