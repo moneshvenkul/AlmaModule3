@@ -1,0 +1,30 @@
+Introduction to Tailwind CSS
+1. What is Tailwind CSS and what makes it different from other CSS frameworks like Bootstrap?
+
+Tailwind CSS is a utility-first CSS framework for creating custom designs without having to leave your HTML. Unlike traditional CSS frameworks like Bootstrap that offer predefined components, Tailwind provides low-level utility classes that let you build completely custom designs without writing CSS.
+2. How do you apply responsive design with Tailwind CSS?
+
+Tailwind CSS uses a mobile-first breakpoint system, similar to other frameworks. You can apply responsive design by prefixing utility classes with breakpoints: sm:, md:, lg:, xl:, 2xl:. For example, sm:text-base lg:text-lg applies text-base size on small screens and text-lg on large screens.
+3. Can you extend or customize Tailwind's default configuration? How?
+
+Yes, Tailwind CSS is highly customizable. You can extend its default configuration by editing the tailwind.config.js file. This allows you to add custom colors, font sizes, breakpoints, and more, or even modify the existing settings to suit your project's needs.
+Advanced Layout Techniques with Tailwind CSS
+1. Explain how to create a grid layout using Tailwind CSS.
+
+To create a grid layout in Tailwind CSS, you can use the grid utility class to define a container as a grid. Then, use grid-cols-{number} to specify the number of columns in the grid. For example, grid grid-cols-3 creates a three-column grid. You can also use gap-{size} to add gaps between the rows and columns.
+2. How can you achieve a sticky header or footer using Tailwind CSS?
+
+You can achieve a sticky header or footer using the sticky positioning utility in Tailwind CSS. For instance, applying sticky top-0 to a header element will make it stick to the top of the viewport. Similarly, sticky bottom-0 can be used for a footer to stick at the bottom.
+3. What are Tailwind CSS plugins and can you give an example of how they might be used?
+
+Tailwind CSS plugins are JavaScript functions that add new utilities, components, or variants to Tailwind. They can be used to extend Tailwind's core functionality. For example, you might use a plugin to add custom form styles or animations. Plugins can be added to your project by requiring them in your tailwind.config.js file.
+Project Management & Deployment - GitHub
+1. How does GitHub assist with project management?
+
+GitHub provides tools like issues, project boards, and milestones to help manage projects. Issues can be used to track tasks, enhancements, and bugs. Project boards can organize issues and pull requests into customizable workflows. Milestones help track progress towards specific project goals.
+2. Explain the basic workflow of deploying a project using GitHub.
+
+A basic workflow for deploying a project using GitHub involves pushing your code to a GitHub repository, possibly using GitHub Actions or webhooks to automate deployment processes. For example, you could set up a workflow that automatically deploys your code to a hosting service like Netlify or Heroku whenever you push changes to the main branch.
+3. What is GitHub Actions and how can it be used in deployment?
+
+GitHub Actions is a CI/CD (Continuous Integration/Continuous Deployment) feature that allows you to automate your build, test, and deployment workflows directly within your GitHub repository. You can use it to set up workflows that automatically deploy your application to a hosting provider whenever you push new code or merge a pull request, ensuring that your deployment process is efficient and consistent.
