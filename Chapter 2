@@ -1,0 +1,50 @@
+DOM Basics
+1. What is the Document Object Model (DOM)?
+
+The DOM is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+2. How can you access the DOM of a webpage?
+
+You can access the DOM using JavaScript. The document object is your entry point to the DOM. For example, document.getElementById('id') or document.querySelector('.class') allows you to access elements directly.
+3. What is the difference between getElementById and querySelector?
+
+getElementById is a method that returns the element that has the ID attribute with the specified value. querySelector, on the other hand, returns the first element that matches a specified CSS selector(s). querySelector is more versatile as it can select elements based on class, id, or any CSS selector.
+DOM in Depth
+1. What is event propagation in the DOM?
+
+Event propagation is a mechanism that defines how events propagate or travel through the DOM tree. It has three phases: capturing phase (event goes down to the target), target phase (event reaches the target element), and bubbling phase (event bubbles up from the target).
+2. How do you stop event propagation?
+
+To stop event propagation, you can use the stopPropagation method on the event object in your event handler. For example, event.stopPropagation() will prevent the event from moving on to the next phase.
+3. What are web components and how do they relate to the DOM?
+
+Web components are a set of web platform APIs that allow you to create custom, reusable, encapsulated HTML tags to use in web pages and web apps. They are closely related to the DOM because they allow developers to define new HTML elements with their behavior encapsulated from the rest of the code, enhancing the structure and manageability of complex web applications.
+jQuery Basics & AJAX
+1. What is jQuery and why is it used?
+
+jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers. It also simplifies the process of AJAX calls.
+2. How do you make an AJAX request with jQuery?
+
+An AJAX request in jQuery can be made using the $.ajax method. For example:
+
+$.ajax({
+  url: 'path/to/file',
+  type: 'GET',
+  dataType: 'json',
+  success: function(data) {
+    console.log(data);
+  }
+});
+
+3. What is the difference between .get() and .post() methods in jQuery?
+
+Both .get() and .post() are shorthand methods for making AJAX requests. .get() is used to retrieve data from the server, and .post() is used to send data to the server. Their main difference lies in the HTTP method they use, which also implies differences in how data is sent.
+Advanced Asynchronous Coding in JavaScript
+1. What is a Promise in JavaScript?
+
+A Promise is an object representing the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code that is more readable and easier to maintain. A promise can be in one of three states: pending, fulfilled, or rejected.
+2. What is async/await and how does it work with Promises?
+
+async/await is syntactic sugar on top of Promises, making asynchronous code look and behave a bit more like synchronous code. An async function always returns a Promise, and await is used to pause the execution of the async function, waiting for the Promise to resolve.
+3. Explain the concept of Promise chaining.
+
+Promise chaining is a technique to execute asynchronous operations in sequence. When a promise is fulfilled, its .then() method is called and it can be chained with another .then() method to run more asynchronous operations after the previous one has completed. If any promise in the chain is rejected, the subsequent .then() methods are skipped and control is passed to the next .catch() in the chain.
