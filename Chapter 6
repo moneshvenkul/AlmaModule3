@@ -1,0 +1,52 @@
+Getting Started with Next.js
+1. What is Next.js and why is it used?
+
+Next.js is a React framework that enables functionality such as server-side rendering and generating static websites for React-based web applications. It's used for creating highly performant and scalable web applications with features like automatic code splitting, optimized prefetching, and more, out of the box.
+2. How do you create a new Next.js project?
+
+A new Next.js project can be created using the create-next-app CLI command. You run npx create-next-app@latest your-project-name in your terminal, which sets up a new Next.js app with all the necessary configurations and dependencies.
+Data Fetching
+1. Explain the different data fetching methods available in Next.js.
+
+Next.js offers several data fetching methods, including getStaticProps for static generation, getServerSideProps for server-side rendering, and getStaticPaths for dynamic routing. Each method serves different use cases, like fetching data at build time, request time, or for dynamic routes.
+2. What is the difference between getStaticProps and getServerSideProps?
+
+getStaticProps fetches data at build time, meaning the data is fetched when the page is built and serves the same static content to every user. getServerSideProps, on the other hand, fetches data on each request, generating dynamic content based on the incoming request parameters or state.
+Routing
+1. How does routing work in Next.js?
+
+Next.js provides file-system-based routing, where the files and folders in the pages directory automatically become routes. Dynamic routes can be created by adding square brackets to a page name, e.g., [id].js. Next.js also supports catch-all routes and optional catch-all routes for more complex routing needs.
+2. How do you create dynamic routes in Next.js?
+
+Dynamic routes are created by adding square brackets around a page name within the pages directory, for example, pages/posts/[id].js. This allows you to access the id as a parameter within your component, enabling the page to fetch data based on the id and render dynamic content.
+Layout & Styles
+1. How do you implement global styles in a Next.js application?
+
+Global styles can be added by importing a CSS file in the custom _app.js file located in the pages directory. This special file is used to initialize pages, and by importing a CSS file here, you apply global styles across all pages of the application.
+2. What are the ways to style Next.js applications?
+
+Next.js supports various styling options, including traditional CSS files, CSS Modules for component-scoped CSS, and styled-jsx for inline CSS with full dynamic support. It also supports CSS-in-JS libraries like styled-components or emotion for more complex styling solutions.
+Next.js Optimization Techniques
+1. What are some optimization techniques available in Next.js?
+
+Next.js provides automatic code splitting, image optimization with the Image component, incremental static regeneration, and server-side rendering. These techniques help in loading only what's necessary, optimizing images on-the-fly, and updating static content without rebuilding the entire site.
+2. Explain Incremental Static Regeneration (ISR) in Next.js.
+
+ISR allows you to update static pages after they've been built without needing to rebuild the entire site. It does this by re-generating pages on-demand after a user request, with a defined fallback and revalidate time, ensuring users always get fast performance while still having up-to-date data.
+Working with Database
+1. How do you integrate a database with a Next.js application?
+
+Integrating a database in Next.js typically involves creating an API route that acts as a middleware between your Next.js application and the database. You can query the database inside your API routes and return the data as JSON to your front-end, which can be fetched using standard fetching methods.
+2. Can you use serverless functions in Next.js to interact with a database? How?
+
+Yes, Next.js supports serverless functions through its API routes feature. You can write serverless functions inside the pages/api directory to perform operations like database queries, and these functions can be deployed as serverless functions on platforms like Vercel, offering scalability and ease of use.
+Security, Testing & Deployment
+1. What are some security best practices in Next.js?
+
+Security best practices in Next.js include sanitizing user input to prevent XSS attacks, implementing proper error handling, using HTTPS for secure data transmission, and protecting sensitive routes and API endpoints through authentication and authorization.
+2. How do you deploy a Next.js application, for instance, on Vercel?
+
+Deploying a Next.js application on Vercel is straightforward due to its native support for Next.js. You simply need to connect your GitHub, GitLab, or Bitbucket repository to Vercel and push your code. Vercel automatically builds and deploys your Next.js application, providing a URL to access it online.
+3. What is the importance of unit testing in Next.js applications and what tools can be used?
+
+Unit testing ensures individual components or functions work as expected, contributing to the overall reliability and maintainability of the application. Tools like Jest for test running and React Testing Library for rendering React components in the test environment are commonly used for unit testing in Next.js applications.
