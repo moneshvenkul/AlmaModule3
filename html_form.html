@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Form Example</title>
+</head>
+<body>
+
+<h2>Sample HTML Form with Basic Inputs</h2>
+
+<form action="home.html" method="post">
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="fname"><br><br>
+    
+    <label for="lname">Last Name:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="pwd">Password:</label><br>
+    <input type="password" id="pwd" name="pwd" minlength="8" required><br><br>
+
+    <label for="age">Age:</label><br>
+    <input type="number" id="age" name="age" min="0"><br><br>
+
+    <p>Gender:</p>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+
+    <label for="hobbies">Select your hobbies:</label><br>
+    <input type="checkbox" id="hobby1" name="hobby1" value="Sports">
+    <label for="hobby1"> Sports</label><br>
+    <input type="checkbox" id="hobby2" name="hobby2" value="Reading">
+    <label for="hobby2"> Reading</label><br>
+    <input type="checkbox" id="hobby3" name="hobby3" value="Traveling">
+    <label for="hobby3"> Traveling</label><br><br>
+
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+        <option value="">Select a country</option>
+        <option value="usa">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="canada">Canada</option>
+        <option value="india">India</option>
+    </select><br><br>
+
+    <label for="bio">Bio:</label><br>
+    <textarea id="bio" name="bio" rows="4" cols="50">
+    </textarea><br><br>
+
+    <label for="file">Upload your CV:</label><br>
+    <input type="file" id="file" name="file"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
