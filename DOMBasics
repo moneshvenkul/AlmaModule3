@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementById Example</title>
+</head>
+<body>
+    <h1 class="hello">Hello, world!</h1>
+    <h1 class="hello">How are you?</h1>
+    <h1 id="hello">Goodbye!</h1>
+    <button onclick="changeText()">Click Me!</button>
+    <a>Google</a>
+
+    <script>
+        function changeText() {
+         let element = document.querySelectorAll('.hello');
+            for (let i = 0; i < element.length; i++) {
+                if (i==1){
+                    continue;
+                }
+                element[i].textContent = "Hello, JavaScript!";
+    }
+}
+
+    // Create a new div element
+        let newH1 = document.createElement("h1");
+
+        // Modify the properties of the new div
+        newH1.textContent = "This is a dynamically created div.";
+        newH1.style.backgroundColor = "blue";
+
+        console.log(newH1.getAttribute("style"));
+
+        // Append the new div to the document
+        document.body.appendChild(newH1);
+
+        let removeH1 = document.getElementById("hello")
+
+        document.body.removeChild(removeH1);
+
+        let google = document.querySelector("a");
+        google.setAttribute("href", "https://www.google.com");
+
+        newH1.removeAttribute("style");
+        console.log(newH1.getAttribute("style"));
+
+
+
+
+    </script>
+</body>
+</html>
