@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Events Example</title>
+</head>
+<body>
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let button = document.getElementById('changeColorButton');
+    button.addEventListener('mouseover', function() {
+        // Change the button's color each time it's clicked
+        this.style.backgroundColor = getRandomColor();
+    });
+});
+
+function getRandomColor() {
+    let r = Math.floor(Math.random() * 256); // Random between 0-255
+    let g = Math.floor(Math.random() * 256); // Random between 0-255
+    let b = Math.floor(Math.random() * 256); // Random between 0-255
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+
+
+
+
+    </script>
+</body>
+</html>
