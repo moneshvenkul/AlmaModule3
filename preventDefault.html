@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prevent Default Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Stop the form from submitting
+
+    // Fetch the username
+    var username = document.getElementById('username').value;
+
+    // Custom validation logic
+    if (username.trim() === '') {
+        document.getElementById('message').textContent = 'Username is required!';
+    } else {
+        document.getElementById('message').textContent = 'Form submitted successfully with username: ' + username;
+
+        // Optionally, send data to a server via AJAX here
+    }
+});
+
+    </script>
+</body>
+</html>
