@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Propagation Example</title>
+    <style>
+        #outer {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #inner {
+            width: 150px;
+            height: 150px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        Outer Div (Clicks captured here)
+        <div id="inner">
+            Inner Div (Clicks bubble here)
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('outer').addEventListener('click', function(event) {
+    alert('Captured on outer div!');
+}, true); // Set to true to handle in the capturing phase
+
+document.getElementById('inner').addEventListener('click', function(event) {
+    alert('Bubbled to inner div!');
+    event.stopPropagation(); // Prevents the event from bubbling further
+}, false); // Set to false to handle in the bubbling phase
+
+    </script>
+</body>
+</html>
