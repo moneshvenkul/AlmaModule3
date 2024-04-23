@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Selectors Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>jQuery Selectors</h1>
+  <p class="intro">Introduction to jQuery Selectors.</p>
+  <p class="intro">Another paragraph.</p>
+  <input type="text" value="Input text here"/>
+  <input type="button" value="Click me" id="btn"/>
+  <ul>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li class="special">List item 3 with class 'special'</li>
+  </ul>
+  <div style="display:none">Invisible Div</div>
+
+  <script>
+    $(document).ready(function() {
+      // Basic Selectors
+      $("*").css("border", "1px solid red"); // Selects all elements
+      $("#btn").css("background-color", "yellow"); // Selects the element with id="btn"
+      $(".intro").css("font-weight", "bold"); // Selects all elements with class="intro"
+      $("p").css("color", "blue"); // Selects all <p> elements
+
+      // Hierarchical Selectors
+      $("body p").css("font-size", "18px"); // Selects all <p> elements inside <body>
+      $("ul li:first-child").css("color", "red"); // Selects the first <li> in each <ul>
+
+      // Basic Filters
+      $("p:first").css("text-decoration", "underline"); // Selects the first <p> element
+      $("li:last").css("background-color", "grey"); // Selects the last <li> element
+      $("li:even").css("background-color", "lightgrey"); // Selects even <li> elements
+      $("li:odd").css("background-color", "lightblue"); // Selects odd <li> elements
+
+      // Content Filter
+      $("li:contains('item 3')").css("font-style", "italic"); // Selects <li> that contains 'item 3'
+
+      // Visibility Filters
+      $("div:visible").slideUp(); // Slides up all visible <div> elements
+      $("div:hidden").show(); // Shows all hidden <div> elements
+
+      // Attribute Filters
+      $("input[type='text']").val("Changed by jQuery"); // Changes the value of text input fields
+
+      // Form Selectors
+      $(":input").css("border", "2px solid green"); // Selects all input elements
+      $(":button").css("border", "2px dashed blue"); // Selects all button elements (including input type="button")
+    });
+  </script>
+</body>
+</html>
