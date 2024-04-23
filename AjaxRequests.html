@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery AJAX Examples</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>jQuery AJAX Requests</h1>
+  <button id="loadData">Load Data</button>
+  <div id="data"></div>
+
+  <script>
+    $(document).ready(function() {
+      // Using $.ajax() function
+      $("#loadData").click(function() {
+        $.ajax({
+          url: "https://jsonplaceholder.typicode.com/posts/1", // Dummy API for demonstration
+          type: "GET",
+          success: function(data) {
+            $('#data').html(`<p>Title: ${data.title}</p><p>Body: ${data.body}</p>`);
+          },
+          error: function(request, status, error) {
+            $('#data').html('Error fetching data');
+            console.error('Error: ' + status + ' ' + error);
+          }
+        });
+      });
+
+      // Shorthand methods: $.get()
+      function loadDataUsingGet() {
+        $.get("https://jsonplaceholder.typicode.com/posts/1", function(data) {
+          alert("Data received: " + data.title);
+        });
+      }
+
+      // Promise-based approach with $.ajax()
+      function loadDataWithPromise() {
+        $.ajax("https://jsonplaceholder.typicode.com/posts/1")
+          .done(function(data) {
+            console.log("Promise-based data received:", data);
+          })
+          .fail(function() {
+            console.log("Error occurred!");
+          });
+      }
+
+      // Additional AJAX settings: Setting timeout
+      function loadDataWithTimeout() {
+        $.ajax({
+          url: "https://jsonplaceholder.typicode.com/posts/1",
+          timeout: 2000, // 2000 milliseconds = 2 seconds
+          success: function(data) {
+            console.log("Data loaded with timeout set:", data);
+          },
+          error: function(request, status, error) {
+            if(status === 'timeout') {
+              console.log('Request timed out!');
+            } else {
+              console.log('Error: ' + status + ' ' + error);
+            }
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
