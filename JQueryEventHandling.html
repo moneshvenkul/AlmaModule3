@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Event Handling Examples</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <h1>Click the button to trigger an event</h1>
+  <button id="clickButton">Click Me</button>
+  <input type="text" id="inputField" placeholder="Type something..."/>
+  <select id="selectBox">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+  </select>
+  <p>Double click on this text</p>
+  <p>Mouse over this text</p>
+  <form id="form1">
+    <input type="submit" value="Submit Form"/>
+  </form>
+
+  <script>
+    $(document).ready(function() {
+      // Click event
+      $("#clickButton").click(function() {
+        alert("Button was clicked!");
+      });
+
+      // Double click event
+      $("p:first").dblclick(function() {
+        $(this).css("color", "red");
+      });
+
+      // Mouse enter event
+      $("p:eq(1)").mouseenter(function() {
+        $(this).css("background-color", "lightblue");
+      });
+
+      // Mouse leave event
+      $("p:eq(1)").mouseleave(function() {
+        $(this).css("background-color", "transparent");
+      });
+
+      // Key press event on an input
+      $("#inputField").keypress(function(event) {
+        console.log("Key pressed: " + event.which); // 'event.which' gives the keycode of the pressed key
+      });
+
+      // Change event on select box
+      $("#selectBox").change(function() {
+        alert("Selected option changed to: " + $(this).val());
+      });
+
+      // Form submit event
+      $("#form1").submit(function(event) {
+        alert("Form is being submitted!");
+        event.preventDefault(); // Prevents the form from being submitted
+      });
+
+      // Hover event (combining mouseenter and mouseleave)
+      $("h1").hover(
+        function() { // Handler for mouseenter
+          $(this).css("color", "green");
+        },
+        function() { // Handler for mouseleave
+          $(this).css("color", "black");
+        }
+      );
+
+      // Focus event
+      $("#inputField").focus(function() {
+        $(this).css("border-color", "green");
+      });
+
+      // Blur event
+      $("#inputField").blur(function() {
+        $(this).css("border-color", "initial");
+      });
+    });
+  </script>
+</body>
+</html>
